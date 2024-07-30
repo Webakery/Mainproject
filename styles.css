@@ -1,0 +1,192 @@
+/* Basic Styles and Responsive Adjustments */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes buttonFade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.slide-in {
+    animation: slideIn 2s ease-out forwards;
+}
+
+.btn-fade {
+    animation: buttonFade 2s ease-out forwards;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav li {
+    margin:  15px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-icons a {
+    color: white;
+    margin-left: 15px;
+    font-size: 1.5em;
+}
+
+.home {
+    height: 100vh;
+    background: url('/Home.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.intro {
+    position: relative;
+    z-index: 2;
+}
+
+.intro h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.intro p {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.buttons .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.buttons .btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.about {
+    padding: 150px 0;
+    background: url('/about.jpg') no-repeat center center/cover;
+    color: white;
+    position: relative;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjusted opacity */
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+}
+
+.services {
+    padding: 100px 0;
+    background: url('/services.jpg') no-repeat center center/cover;
+    color: white;
+    position: relative;
+}
+
+.contact {
+    padding: 150px;
+    background: url('https://mdbootstrap.com/img/new/fluid/nature/012.jpg') no-repeat center center/cover;
+    color: white;
+    position: relative;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Changed from absolute to relative */
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav li {
+        margin: 10px 0;
+    }
+    .social-icons {
+        margin-top: 10px;
+    }
+}
